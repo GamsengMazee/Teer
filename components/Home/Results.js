@@ -10,6 +10,8 @@ const timeNow = new Date();
 const time = timeNow.getHours();
 const todaysDate = timeNow.toLocaleDateString("en-GB");
 
+console.log(time)
+
 export default function Results({ resData }) {
   const [timeToggle, setTimeToggle] = useState(prevDate);
   let newData = [];
@@ -24,9 +26,9 @@ export default function Results({ resData }) {
   useEffect(() => {
     if (timeNow.getDay() === 0) {
       setTimeToggle(prevDate);
-    } else if (timeNow.getDay() === 1 && time < 15) {
+    } else if (timeNow.getDay() === 1 && time < 14) {
       setTimeToggle(prevDate);
-    } else if (time >= 15) {
+    } else if (time >= 14) {
       setTimeToggle(todaysDate);
     }
   }, []);
