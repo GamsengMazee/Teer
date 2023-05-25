@@ -7,6 +7,7 @@ export default function TableComp(props) {
       <div className={classes.title}>
         <h1>{props.title}</h1>
       </div>
+      <h3 className="text-center mt-5">{props.date}</h3>
       <div className={classes.tableWrapper}>
         <Table className={classes.table} striped bordered hover variant="dark">
           <thead>

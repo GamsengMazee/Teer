@@ -10,7 +10,6 @@ const timeNow = new Date();
 const time = timeNow.getHours();
 const todaysDate = timeNow.toLocaleDateString("en-GB");
 
-
 export default function Results({ resData }) {
   const [timeToggle, setTimeToggle] = useState(prevDate);
   let newData = [];
@@ -58,6 +57,7 @@ export default function Results({ resData }) {
       <Ads />
 
       <TableComp
+        date={timeToggle}
         title="Shillong Teer Results"
         frResults={r1_fr ? r1_fr.toString().padStart(2, "0") : "X"}
         srResults={r1_sr ? r1_sr.toString().padStart(2, "0") : "X"}
@@ -66,6 +66,7 @@ export default function Results({ resData }) {
       />
 
       <TableComp
+        date={timeToggle}
         title="Khanapara Teer Results"
         frResults={r2_fr ? r2_fr.toString().padStart(2, "0") : "X"}
         srResults={r2_sr ? r2_sr.toString().padStart(2, "0") : "X"}
@@ -74,6 +75,7 @@ export default function Results({ resData }) {
       />
 
       <TableComp
+        date={timeToggle}
         title="Jowai Teer Results"
         frResults={r3_fr ? r3_fr.toString().padStart(2, "0") : "X"}
         srResults={r3_sr ? r3_sr.toString().padStart(2, "0") : "X"}
