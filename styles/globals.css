@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Playfair+Display:wght@500&display=swap");
+
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+:root {
+  --light: #bbe7fe;
+  --primary: #d3b5e5;
+  --secondary:  rgb(255, 131, 141);
+  --accent: #eff1db;
+  --white: #fff;
+  --dark: #1a3c40;
+  --textColor: #6b6c6e;
+  /* Font */
+  --font1: "Playfair Display", serif;
+  --font2: 'Noto Serif', serif;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

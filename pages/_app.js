@@ -1,0 +1,81 @@
+import Layout from "@/components/Layout/Layout";
+import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "@/styles/globals.css";
+import AppContext from "@/store/AppContext";
+import Footer from "@/components/Footer/Footer";
+import { useRouter } from "next/router";
+import Login from "./login";
+
+
+export default function App({ Component, pageProps }) {
+  const [adminState, setAdminState] = useState(true);   //toggle between footer and admin component
+  const [resData, setResData] = useState()   //store results data from db
+  const [valueContext, setValueContext] = useState()  //for useContext hook
+
+  const router = useRouter();
+  
+  
+  const path = router.pathname;
+  
+  // fetch results data and pass it to component 
+   function fetchData() {
+    try {
+      fetch(`api/get_result/todaysresult`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setResData(data)
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  //fetch House ending data
+  function houseEnding(){
+    try {
+      fetch(`api/house/get_data`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setValueContext(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+    fetchData()
+    houseEnding()
+
+    if (path !== "/adminpanel") {
+      setAdminState(false);
+    } else {
+      setAdminState(true);
+    }
+  }, [path]);
+
+  if (path == "/login") {
+    return <Login />;
+  } else if(resData !== null && resData !== undefined){
+    return (
+      <AppContext.Provider value={{valueContext, setValueContext}}>
+      <Layout>
+        <Component resData = {resData} {...pageProps} />
+        {adminState ? "" : <Footer />}
+      </Layout>
+      </AppContext.Provider>
+    );
+  }
+}
