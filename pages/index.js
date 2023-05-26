@@ -15,6 +15,7 @@ export default function Home(props) {
           name="keywords"
           content="Teer, Shillong Teer, Shillong teer number, Meghalaya teer results, teer today, teerresults"
         />
+        <meta name="google-site-verification" content="UXadkPAeoO-Dli-mHnaTwTsyq3mZ918nwPvwypImSBw" />
         {/* gAds */}
         <script
           async
