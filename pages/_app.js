@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
 import Login from "./login";
 import Script from "next/script";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   const [adminState, setAdminState] = useState(true); //toggle between footer and admin component
@@ -86,7 +87,20 @@ export default function App({ Component, pageProps }) {
            `}
         </Script>
         {/*  Google Analytics Ends*/}
-        
+
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="UXadkPAeoO-Dli-mHnaTwTsyq3mZ918nwPvwypImSBw"
+          />
+          {/* gAds */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
+            crossorigin="anonymous"
+          ></script>
+        </Head>
+
         <Layout>
           <Component resData={resData} {...pageProps} />
           {adminState ? "" : <Footer />}
