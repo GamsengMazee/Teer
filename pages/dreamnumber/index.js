@@ -16,6 +16,11 @@ export default function DreamNumber() {
           name="keywords"
           content="Teer Dream Numbers, Dream Numbers, Meghalaya Teer, Teer, Shillong Teer, "
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <h1 className="text-center mb-5" style={{ paddingTop: "150px" }}>
         Dream Numbers

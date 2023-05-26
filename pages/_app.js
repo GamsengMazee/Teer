@@ -6,27 +6,26 @@ import AppContext from "@/store/AppContext";
 import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
 import Login from "./login";
-
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
-  const [adminState, setAdminState] = useState(true);   //toggle between footer and admin component
-  const [resData, setResData] = useState()   //store results data from db
-  const [valueContext, setValueContext] = useState()  //for useContext hook
+  const [adminState, setAdminState] = useState(true); //toggle between footer and admin component
+  const [resData, setResData] = useState(); //store results data from db
+  const [valueContext, setValueContext] = useState(); //for useContext hook
 
   const router = useRouter();
-  
-  
+
   const path = router.pathname;
-  
-  // fetch results data and pass it to component 
-   function fetchData() {
+
+  // fetch results data and pass it to component
+  function fetchData() {
     try {
       fetch(`api/get_result/todaysresult`)
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-          setResData(data)
+          setResData(data);
         })
         .catch((error) => {
           console.log(error);
@@ -37,7 +36,7 @@ export default function App({ Component, pageProps }) {
   }
 
   //fetch House ending data
-  function houseEnding(){
+  function houseEnding() {
     try {
       fetch(`api/house/get_data`)
         .then((response) => {
@@ -56,8 +55,8 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
-    fetchData()
-    houseEnding()
+    fetchData();
+    houseEnding();
 
     if (path !== "/adminpanel") {
       setAdminState(false);
@@ -68,13 +67,30 @@ export default function App({ Component, pageProps }) {
 
   if (path == "/login") {
     return <Login />;
-  } else if(resData !== null && resData !== undefined){
+  } else if (resData !== null && resData !== undefined) {
     return (
-      <AppContext.Provider value={{valueContext, setValueContext}}>
-      <Layout>
-        <Component resData = {resData} {...pageProps} />
-        {adminState ? "" : <Footer />}
-      </Layout>
+      <AppContext.Provider value={{ valueContext, setValueContext }}>
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-H7EW7F172T"
+        />
+
+        <Script strategy="afterInteractive" id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-H7EW7F172T');
+           `}
+        </Script>
+        {/*  Google Analytics Ends*/}
+        
+        <Layout>
+          <Component resData={resData} {...pageProps} />
+          {adminState ? "" : <Footer />}
+        </Layout>
       </AppContext.Provider>
     );
   }

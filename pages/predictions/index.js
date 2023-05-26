@@ -11,7 +11,6 @@ const prevDate = previousDate();
 export default function Predictions({ resData }) {
   const context = useContext(AppContext);
 
-  // const [houseData, setHouseData] = useState();
   let newData = [];
   let s1;
   let s2;
@@ -78,6 +77,11 @@ export default function Predictions({ resData }) {
           name="keywords"
           content="Teer, Direct Number, Shillong Teer, Common Number, Previous teer results, Meghalaya teer results, teer today"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <div className={classes.tableWrapper} style={{ paddingTop: "160px" }}>
         <h1 className="text-center mb-5">Common Numbers</h1>

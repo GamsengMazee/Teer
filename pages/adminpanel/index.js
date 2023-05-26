@@ -6,6 +6,7 @@ import ToastComp from "../../components/ui/ToastComp";
 import { useRouter } from "next/router";
 import Loader from "@/components/ui/Loader";
 import HouseComponent from "@/components/Admin/HouseComponent";
+import Head from "next/head";
 
 const todaysDate = new Date().toLocaleDateString("en-GB");
 
@@ -83,6 +84,13 @@ export default function Admin({ resData }) {
   } else {
     return (
       <div className={classes.admin}>
+        <Head>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
+            crossorigin="anonymous"
+          ></script>
+        </Head>
         <h1
           className="text-center"
           style={{ paddingTop: "150px", marginBottom: "35px" }}
@@ -119,9 +127,12 @@ export default function Admin({ resData }) {
 
           <div className="container">
             <div className="row">
-            <div className="col-md-4 mb-5">
-               <HouseComponent toggleToast={toggleToast} title = "Update House Ending"/>
-            </div>
+              <div className="col-md-4 mb-5">
+                <HouseComponent
+                  toggleToast={toggleToast}
+                  title="Update House Ending"
+                />
+              </div>
             </div>
           </div>
           <ToastComp toastState={toastState} />
