@@ -10,8 +10,6 @@ const timeNow = new Date();
 const time = timeNow.getHours();
 const todaysDate = timeNow.toLocaleDateString("en-GB");
 
-console.log(time)
-
 export default function Results({ resData }) {
   const [timeToggle, setTimeToggle] = useState(prevDate);
   let newData = [];
