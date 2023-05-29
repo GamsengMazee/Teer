@@ -6,6 +6,24 @@
     color: var(--secondary);
     font-family: var(--font2);
 }
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-family: var(--font2);
+}
+.headerContainer{
+    width: 80%;
+    text-indent: 30px;
+    text-align: justify;
+}
+.headerContainer p{
+   font-size: 1.7rem;
+}
+
 .tableWrapper{
     width: 100%;
     display: flex;

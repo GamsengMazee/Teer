@@ -5,6 +5,7 @@ import { previousDate } from "@/utils/yesterdayDate";
 import { useContext } from "react";
 import AppContext from "@/store/AppContext";
 import Head from "next/head";
+import Card from "@/components/ui/Card";
 
 const prevDate = previousDate();
 
@@ -66,7 +67,7 @@ export default function Predictions({ resData }) {
   }
 
   return (
-    <div style={{ height: "400px" }}>
+    <>
       <Head>
         <title>Teer Mania - Common Numbers</title>
         <meta
@@ -77,15 +78,20 @@ export default function Predictions({ resData }) {
           name="keywords"
           content="Teer, Direct Number, Shillong Teer, Common Number, Previous teer results, Meghalaya teer results, teer today"
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
-          crossorigin="anonymous"
-        ></script>
       </Head>
       <div className={classes.tableWrapper} style={{ paddingTop: "160px" }}>
-        <h1 className="text-center mb-5">Common Numbers</h1>
-        <Table bordered hover>
+        <div className={classes.cardWrapper}>
+          <Card classes = {classes.card}>
+            <h1 className="text-center mb-5">Common Numbers</h1>
+            <p>
+              We predict and update the possible lucky numbers everyday. These numbers are
+              based on previous results which are calculated on various other factors.
+              Though they are not 100% accurate, we always succeed in accurately restrict the lucky numbers, so, 
+              everyone can have the higher chance of winning.
+            </p>
+          </Card>
+        </div>
+        <Table className={classes.table} striped bordered hover variant="dark">
           <thead>
             <tr>
               <th className="text-center">Direct Number</th>
@@ -118,11 +124,14 @@ export default function Predictions({ resData }) {
           todays target.{" "}
         </p>
 
-        <p className="mt-5 mb-5 px-3">
+        <p
+          className="mt-5 mb-5 px-3"
+          style={{ fontSize: "12px", paddingTop: "50px" }}
+        >
           <span className="pd-5 h5">Note:</span> This predictions are not 100%
           accurate. We are not responsible for any mishap or loses.{" "}
         </p>
       </div>
-    </div>
+    </>
   );
 }

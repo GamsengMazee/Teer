@@ -2,10 +2,10 @@ import { Table } from "react-bootstrap";
 import classes from "./previous.module.css";
 import Head from "next/head";
 
+
 const todaysDate = new Date().toLocaleDateString("en-GB");
 
 export default function PreviousResults({ resData }) {
-  // console.log(resData);
 
   let newData = [];
 
@@ -28,15 +28,14 @@ export default function PreviousResults({ resData }) {
           name="keywords"
           content="previous results, previous teer, previous teer results, shillong teer results, teer today, meghalaya teer, shillong teer, teerresults"
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
-          crossorigin="anonymous"
-        ></script>
       </Head>
-      <h1 className="text-center mb-5" style={{ paddingTop: "150px" }}>
-        Previous Results
-      </h1>
+
+      <div className={classes.header}>
+        <h1 className="text-center mb-5" style={{ paddingTop: "150px" }}>
+          Previous Results
+        </h1>
+        <p>Get the previous teer results of Jowai, Shillong and Khanapara.</p>
+      </div>
       <div className={classes.tableWrapper}>
         <Table bordered hover>
           <thead>

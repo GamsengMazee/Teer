@@ -10,21 +10,25 @@ export default function DreamNumber() {
         <title>Teer Mania - Dream Numbers</title>
         <meta
           name="description"
-          content="Your Dream have some meanings. Check our list of dreams and its meanings. "
+          content="Your Dream have some meanings. Check our list of dreams and its meanings."
         />
         <meta
           name="keywords"
           content="Teer Dream Numbers, Dream Numbers, Meghalaya Teer, Teer, Shillong Teer, "
         />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
-          crossorigin="anonymous"
-        ></script>
       </Head>
-      <h1 className="text-center mb-5" style={{ paddingTop: "150px" }}>
-        Dream Numbers
-      </h1>
+
+      <div className={classes.header}>
+        <div className={classes.headerContainer}>
+          <h1 className="text-center mb-5" style={{ paddingTop: "150px" }}>
+            Dream Numbers
+          </h1>
+          <p>
+            Every dream has a meaning. We have decoded various dreams and listed
+            them here. These are mostly based on research and experience.
+          </p>
+        </div>
+      </div>
       <div className={classes.tableWrapper}>
         <Table bordered hover>
           <thead>

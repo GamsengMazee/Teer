@@ -16,14 +16,35 @@
     color:var(--secondary);
     font-weight: 900;
 }
+.cardWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card p {
+    padding: 0 5px 0 5px;
+    text-indent: 30px;
+    text-align: justify;
+}
+.table{
+    margin-top: 80px;
+}
 .note{
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .note_text{
     text-align: center;
     padding-right: 8px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 @media screen and (max-width: 767px) {
