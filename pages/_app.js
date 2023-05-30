@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import Login from "./login";
 import Script from "next/script";
 import Head from "next/head";
+import Meta from "@/components/meta/Meta";
 
 export default function App({ Component, pageProps }) {
   const [adminState, setAdminState] = useState(true); //toggle between footer and admin component
@@ -70,7 +71,9 @@ export default function App({ Component, pageProps }) {
     return <Login />;
   } else if (resData !== null && resData !== undefined) {
     return (
-      <AppContext.Provider value={{ valueContext, setValueContext }}>
+      // ContextApi  
+      <AppContext.Provider value={{ valueContext, setValueContext }}>   
+
         {/* Google Analytics */}
         <Script
           strategy="afterInteractive"
@@ -95,23 +98,7 @@ export default function App({ Component, pageProps }) {
             crossorigin="anonymous"
             strategy="afterInteractive"
           />
-
-        <Head>
-          <meta
-            name="google-site-verification"
-            content="UXadkPAeoO-Dli-mHnaTwTsyq3mZ918nwPvwypImSBw"
-          />
-          <title>Teer Mania - Get Your instant Teer Results</title>
-          <meta
-            name="description"
-            content="Get your daily teer results instantly. With daily updated Common Numbers, Level up your game and get best results. "
-          />
-          <meta
-            name="keywords"
-            content="Teer, Shillong Teer, Shillong teer number, Meghalaya teer results, teer today, teerresults"
-          />
-        </Head>
-
+          <Meta />
         <Layout>
           <Component resData={resData} {...pageProps} />
           {adminState ? "" : <Footer />}

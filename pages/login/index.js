@@ -1,14 +1,14 @@
 import { useState } from "react";
 import classes from "./login.module.css";
 import { useRouter } from "next/router";
-
+import Head from "next/head";
 
 let initialValue = { name: "", password: "" };
 
 export default function Login() {
   const [inputField, setInputField] = useState(initialValue);
 
-  const router = useRouter()
+  const router = useRouter();
 
   //Bind input field
   const onChangeHandler = (e) => {
@@ -38,11 +38,10 @@ export default function Login() {
         body: JSON.stringify(inputField),
       });
 
-
       if (response.status === 200) {
         const data = await response.json();
         setInputField(initialValue);
-        router.push('/adminpanel')
+        router.push("/adminpanel");
       } else {
         window.alert("Login Failed");
       }
@@ -52,34 +51,39 @@ export default function Login() {
   };
 
   return (
-    <div className={classes.main}>
-      <div className={classes.background}>
-        <div className={classes.shape}></div>
-        <div className={classes.shape}></div>
+    <>
+    <Head>
+      <title>Login</title>
+    </Head>
+      <div className={classes.main}>
+        <div className={classes.background}>
+          <div className={classes.shape}></div>
+          <div className={classes.shape}></div>
+        </div>
+        <form className={classes.forms}>
+          <h3>~ Admin Login ~</h3>
+
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            onChange={onChangeHandler}
+            name="name"
+            placeholder="Enter your name"
+            value={inputField.name}
+          />
+
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            onChange={onChangeHandler}
+            name="password"
+            placeholder="Enter your password"
+            value={inputField.password}
+          />
+
+          <button onClick={submitHandler}>Log In</button>
+        </form>
       </div>
-      <form className={classes.forms}>
-        <h3>~ Admin Login ~</h3>
-
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          onChange={onChangeHandler}
-          name="name"
-          placeholder="Enter your name"
-          value={inputField.name}
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          onChange={onChangeHandler}
-          name="password"
-          placeholder="Enter your password"
-          value={inputField.password}
-        />
-
-        <button onClick={submitHandler}>Log In</button>
-      </form>
-    </div>
+    </>
   );
 }
