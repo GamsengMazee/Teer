@@ -14,7 +14,7 @@ export default function Meta() {
         name="keywords"
         content="Teer results, Shillong Teer, Shillong teer number, Meghalaya teer results, teer today, teerresults"
       />
-      <link rel="canonical" href="https://www.teermania.com" />
+      <link rel="canonical" href="https://teermania.com" />
       <meta http-equiv="Pragma" content="no-cache" />
       <meta name="robots" content="index, follow" />
       <meta name="google" value="notranslate" />
