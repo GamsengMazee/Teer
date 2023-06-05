@@ -15,7 +15,6 @@ export default function Admin({ resData }) {
   const [loaderState, setLoaderState] = useState(true);
 
   const router = useRouter();
-  let cookie = getCookies("bisk_21");
 
   //Redirect to homepage if cookie does not exist or verify cookie if it exist
   const authenticate = useCallback(async () => {
@@ -85,11 +84,9 @@ export default function Admin({ resData }) {
     return (
       <div className={classes.admin}>
         <Head>
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5389225006035489"
-            crossorigin="anonymous"
-          ></script>
+        <title>Admin Page</title>
+          <meta name="robots" content="noindex" />
+          <link rel="canonical" href="https://www.teermania.com/adminpanel" />
         </Head>
         <h1
           className="text-center"

@@ -8,13 +8,13 @@ export default function Meta() {
       </title>
       <meta
         name="description"
-        content="Get your Shillong Teer Results, Khanapara Teer Results and Jowai Teer Results instantly. With daily updated Common Numbers and advanced Prediction technique, You will have higher chance of winning. "
+        content="Get your SHILLONG TEER RESULTS, KHANAPARA TEER RESULTS and JOWAI TEER RESULTS instantly. With daily updated Common Numbers and advanced Prediction technique, You will have higher chance of winning. "
       />
       <meta
         name="keywords"
         content="Teer results, Shillong Teer, Shillong teer number, Meghalaya teer results, teer today, teerresults"
       />
-      <link rel="canonical" href="https://teermania.com" />
+      <link rel="canonical" href="https://www.teermania.com" />
       <meta http-equiv="Pragma" content="no-cache" />
       <meta name="robots" content="index, follow" />
       <meta name="google" value="notranslate" />
@@ -35,9 +35,18 @@ export default function Meta() {
       <meta property="fb:app_id" content="1299033271025338" />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="TEER RESULTS | SHILLONG TEER RESULTS | KHANAPARA TEER RESULTS | JOWAI TEER RESULTS" />
-      <meta name="twitter:description" content="Teer Results, Shillong Teer Results, Khanapara Teer Results, Juwai Teer Results online here. Get your teer results instantly" />
-      <meta name="twitter:image" content="https://teermania.com/images/logo.png" />
+      <meta
+        name="twitter:title"
+        content="TEER RESULTS | SHILLONG TEER RESULTS | KHANAPARA TEER RESULTS | JOWAI TEER RESULTS"
+      />
+      <meta
+        name="twitter:description"
+        content="Teer Results, Shillong Teer Results, Khanapara Teer Results, Juwai Teer Results online here. Get your teer results instantly"
+      />
+      <meta
+        name="twitter:image"
+        content="https://teermania.com/images/logo.png"
+      />
     </Head>
   );
 }

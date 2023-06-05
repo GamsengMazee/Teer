@@ -8,14 +8,6 @@ export default function Home(props) {
     <div>
       <Head>
         <title>Teer Mania - Get Your instant Teer Results</title>
-        <meta
-          name="description"
-          content="Get your daily teer results instantly. With daily updated Common Numbers, Level up your game and get best results. "
-        />
-        <meta
-          name="keywords"
-          content="Teer, Shillong Teer, Shillong teer number, Meghalaya teer results, teer today, teerresults"
-        />
         <meta name="google-site-verification" content="UXadkPAeoO-Dli-mHnaTwTsyq3mZ918nwPvwypImSBw" />
       </Head>
       <Banner />

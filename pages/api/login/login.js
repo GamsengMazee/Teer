@@ -17,7 +17,7 @@ export default async function login(req, res) {
 
       if (isMatch === true) {
         const token = await loginUser.generateAuthToken();
-        setCookie("bisk_21", token, {req, res, httpOnly: true, maxAge: 60 * 60})
+        setCookie("bisk_21", token, {req, res, httpOnly: true, maxAge: 60 * 60 *4})
         res.status(200).send(loginUser);
       } else {
         res.status(400).send("Invalid Credentials");

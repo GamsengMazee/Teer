@@ -106,7 +106,7 @@ export default function UpdateResults(props) {
                 value={teer.sr}
               />
             </div>
-            <button className="btn btn-primary" type="submit" onClick={submitHandler} placeholder="Submit">
+            <button className="btn btn-primary" disabled = {fr} type="submit" onClick={submitHandler} placeholder="Submit">
               SUBMIT
             </button>
 

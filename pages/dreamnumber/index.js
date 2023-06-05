@@ -16,6 +16,7 @@ export default function DreamNumber() {
           name="keywords"
           content="Teer Dream Numbers, Dream Numbers, Meghalaya Teer, Teer, Shillong Teer, "
         />
+        <link rel="canonical" href="https://www.teermania.com/dreamnumber" />
       </Head>
 
       <div className={classes.header}>

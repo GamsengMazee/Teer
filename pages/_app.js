@@ -7,7 +7,6 @@ import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
 import Login from "./login";
 import Script from "next/script";
-import Head from "next/head";
 import Meta from "@/components/meta/Meta";
 
 export default function App({ Component, pageProps }) {

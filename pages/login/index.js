@@ -54,6 +54,8 @@ export default function Login() {
     <>
     <Head>
       <title>Login</title>
+      <meta name="robots" content="noindex" />
+      <link rel="canonical" href="https://www.teermania.com/login" />
     </Head>
       <div className={classes.main}>
         <div className={classes.background}>

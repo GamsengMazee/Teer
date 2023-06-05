@@ -72,12 +72,13 @@ export default function Predictions({ resData }) {
         <title>Teer Mania - Common Numbers</title>
         <meta
           name="description"
-          content="At Teer Mania we update our Common Numbers everyday. We have predicted 90% teer results correctly. "
+          content="At Teer Mania we update our Common Numbers everyday. With Advance Prediction technique, Level up your game and boost your chance of winning. "
         />
         <meta
           name="keywords"
           content="Teer, Direct Number, Shillong Teer, Common Number, Previous teer results, Meghalaya teer results, teer today"
         />
+        <link rel="canonical" href="https://www.teermania.com/predictions" />
       </Head>
       <div className={classes.tableWrapper} style={{ paddingTop: "160px" }}>
         <div className={classes.cardWrapper}>
