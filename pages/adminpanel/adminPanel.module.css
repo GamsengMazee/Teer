@@ -1,0 +1,36 @@
+.admin{
+    width: 100%;
+    height: 100%;
+}
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms{
+    width: 60%;
+    font-size: 2rem;
+}
+
+.forms input{
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.forms button{
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.forms input::placeholder{
+    color: rgb(88, 87, 87);
+    font-size: 1.3rem;
+}
+
+.loaderWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

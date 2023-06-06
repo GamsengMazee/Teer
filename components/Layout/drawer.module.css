@@ -1,0 +1,16 @@
+.drawer{
+    height: 100%;
+    width: 68%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    background-color: #fff;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+.drawer.open{
+    transform: translateX(0);
+}

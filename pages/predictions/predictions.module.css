@@ -1,0 +1,55 @@
+.tableWrapper{
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tableWrapper table{
+    width: 70%;
+    user-select: none;
+}
+.tableWrapper h1{
+    font-family: var(--font2);
+    color:var(--secondary);
+    font-weight: 900;
+}
+.cardWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card p {
+    padding: 0 5px 0 5px;
+    text-indent: 30px;
+    text-align: justify;
+}
+.table{
+    margin-top: 80px;
+}
+.note{
+    margin-top: 80px;
+}
+
+.note_text{
+    text-align: center;
+    padding-right: 8px;
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 767px) {
+    .tableWrapper table{
+        width: 90%;
+       padding-bottom: 20px;
+    }
+}
